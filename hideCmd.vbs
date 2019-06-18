@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "ff-prompt.bat",0,True
