@@ -16,3 +16,5 @@ PROMPT $P$_$G
 SET PATH=%CD%;%PATH%
 CLS
 
+
+ffmpeg -i input.mp4 audio.mp3

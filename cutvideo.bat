@@ -16,3 +16,5 @@ PROMPT $P$_$G
 SET PATH=%CD%;%PATH%
 CLS
 
+
+ffmpeg -i input.mp4 -ss 10 -to 40 output.mp4
