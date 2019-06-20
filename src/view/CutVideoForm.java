@@ -57,6 +57,8 @@ public class CutVideoForm extends javax.swing.JFrame {
         start = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         end = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +72,7 @@ public class CutVideoForm extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Process :");
 
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\nguyenvantuan\\Documents\\NetBeansProjects\\CutVideo\\image\\cutvideo.png")); // NOI18N
         jButton2.setText("Cut Video");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,16 +101,33 @@ public class CutVideoForm extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\nguyenvantuan\\Documents\\NetBeansProjects\\CutVideo\\image\\preview.png")); // NOI18N
+        jButton3.setText("Preview");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\nguyenvantuan\\Documents\\NetBeansProjects\\CutVideo\\image\\back.png")); // NOI18N
+        jButton4.setText("Back");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(msg, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61))
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addComponent(jButton2))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -122,12 +142,14 @@ public class CutVideoForm extends javax.swing.JFrame {
                                 .addGap(33, 33, 33)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(18, 18, 18)
-                                .addComponent(end, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(end, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                        .addComponent(jButton3)
+                        .addGap(45, 45, 45)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(22, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(msg, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,15 +166,19 @@ public class CutVideoForm extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(end, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(process, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(msg, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton4)
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
@@ -282,6 +308,81 @@ public class CutVideoForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_endActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if ("".equals(linkFile.getText())) {
+            JOptionPane.showMessageDialog(this, "Incorrect file", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            // Coppy file cần xử lý vào thư mục bin
+            try {
+                inStream = new FileInputStream(new File(linkFile.getText()));
+                outStream = new FileOutputStream(new File("bin\\prew.mp4"));
+                
+                int length;
+                byte[] buffer = new byte[1024];
+
+                // copy the file content in bytes
+                while ((length = inStream.read(buffer)) > 0) {
+                    outStream.write(buffer, 0, length);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    inStream.close();
+                    outStream.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(CutVideoForm.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
+            // Tạo file bat xử lý
+            try {
+                inStream = new FileInputStream(new File("ff-prompt.bat"));
+                outStream = new FileOutputStream(new File("previewvideo.bat"));
+                
+                int length;
+                byte[] buffer = new byte[1024];
+
+                // copy the file content in bytes
+                while ((length = inStream.read(buffer)) > 0) {
+                    outStream.write(buffer, 0, length);
+                }
+
+                // Thêm lệnh cut video vào file bat
+                FileWriter fw = new FileWriter("previewvideo.bat", true);
+                fw.write("\r\nffplay prew.mp4");
+                fw.close();
+                
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    inStream.close();
+                    outStream.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(CutVideoForm.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
+            // xem trước video
+            try {
+                Process p = Runtime.getRuntime().exec("cmd /c start previewvideo.vbs");
+                
+                p.waitFor();
+                
+            } catch (Exception e) {
+                System.out.println("ket thuc");
+                // TODO: handle exception
+            }
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        MainForm mainform = new MainForm();
+        mainform.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -333,6 +434,8 @@ public class CutVideoForm extends javax.swing.JFrame {
     private javax.swing.JTextField end;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
