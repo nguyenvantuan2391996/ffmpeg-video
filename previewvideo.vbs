@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "previewvideo.bat",0,True
